@@ -135,7 +135,7 @@ def load_globals():
   global client
   global cfg
   print("")
-  site = input("Platform (livephish or nugs): ").strip()
+  site = input("Platform (livephish or nugs)?: ").strip()
   print("")
   client = downloader.Client(site);
   cfg = client.parse_cfg(site)
