@@ -3,7 +3,6 @@ Tool written in Python to download streamable tracks from nugs.net.
 
 ![](https://orion.feralhosting.com/sorrow/ngs.png)
 
-# Setup
 ## Mandatory ##
 The following field values need to be inputted into the config file:
 - email

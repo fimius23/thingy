@@ -2,13 +2,40 @@ import json
 import requests
 import os
 
+# from https://gist.github.com/FluffyDietEngine/94c0137445555a418ac9f332edfa6f4b
+from requests import Session
+from requests import adapters
+from urllib3 import poolmanager
+from ssl import create_default_context, Purpose, CERT_NONE
+
 from definitions import ROOT_DIR
 from downloader.exceptions import AuthenticationError, IneligibleError
+
+class CustomHttpAdapter (adapters.HTTPAdapter):
+    def __init__(self, ssl_context=None, **kwargs):
+        self.ssl_context = ssl_context
+        super().__init__(**kwargs)
+
+    def init_poolmanager(self, connections, maxsize, block=False):
+        self.poolmanager = poolmanager.PoolManager(
+            num_pools=connections, maxsize=maxsize,
+            block=block, ssl_context=self.ssl_context)
+
+def ssl_supressed_session():
+    ctx = create_default_context(Purpose.SERVER_AUTH)
+    # to bypass verification after accepting Legacy connections
+    ctx.check_hostname = False
+    ctx.verify_mode = CERT_NONE
+    # accepting legacy connections
+    ctx.options |= 0x4    
+    session = Session()
+    session.mount('https://', CustomHttpAdapter(ctx))
+    return session
 
 class Client:
   def __init__(self, site, **kwargs):
     cfg = self.parse_cfg(site)
-    self.session = requests.Session()
+    self.session = ssl_supressed_session()
     self.session.headers.update({
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; '
         'rv:67.0) Gecko/20100101 Firefox/67.0',
