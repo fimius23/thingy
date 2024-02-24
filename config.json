@@ -1,15 +1,15 @@
 {
   "livephish": {
     "base": "https://livephish.com/",
-    "directory": "/Users/fimius/Exclude/downloads",
+    "directory": "/Users/phimius/Exclude/downloads",
     "email": "ben.j.kramer@gmail.com",
-    "password": "demgo9-dokqeb-fucNok",
+    "password": "todzy3-ziDduj-takfov",
     "quality": 3,
     "referer": "https://plus.livephish.com/"
   },
   "nugs": {
     "base": "https://streamapi.nugs.net/",
-    "directory": "/Users/fimius/Exclude/downloads",
+    "directory": "/Users/phimius/Exclude/downloads",
     "email": "ben.j.kramer@gmail.com",
     "password": "giqtaj-cyVmas-7dufze",
     "quality": 3,

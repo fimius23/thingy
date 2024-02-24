@@ -5,6 +5,7 @@ Tool written in Python to download streamable tracks from nugs.net.
 
 ## Mandatory ##
 The following field values need to be inputted into the config file:
+- directory - path to download directory
 - email
 - password - in plain text
 - quality - quality track to fetch from API. 1: AAC 150, 2: FLAC, 3: ALAC, 4: 24-bit MQA / best.
@@ -14,7 +15,7 @@ Nugs-DL may also be used via CLI.
 ```
 usage: Nugs-DL.py [-h] -u URL [-q {1,2,3,4}]
 
-Sorrow446.
+fimius23.
 
 optional arguments:
   -h, --help            show this help message and exit

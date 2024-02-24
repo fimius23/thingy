@@ -33,16 +33,16 @@ def os_cmds(arg):
     if arg == "c":
       os.system('cls')
     elif arg == "t":
-      os.system('title Nugs-DL R2 (by Sorrow446)')
+      os.system('title Nugs-DL R3 (by fimius23)')
   else:
     if arg == "c":
       os.system('clear')
     elif arg == 't':
-      sys.stdout.write('\x1b]2;Nugs-DL R2 (by Sorrow446)\x07')
+      sys.stdout.write('\x1b]2;Nugs-DL R3 (by fimius23)\x07')
 
 def parse_args(qual):
   parser = argparse.ArgumentParser(
-    description='Sorrow446.')
+    description='fimius23.')
   parser.add_argument(
     '-u', '--url',
     help="URL or text file filename.",
