@@ -15,8 +15,6 @@ Nugs-DL may also be used via CLI.
 ```
 usage: Nugs-DL.py [-h] -u URL [-q {1,2,3,4}]
 
-fimius23.
-
 optional arguments:
   -h, --help            show this help message and exit
   -u URL, --url URL     URL or text file filename.
@@ -25,14 +23,6 @@ optional arguments:
   ```
 
 **You can't download ANY tracks with a free account.**
-
-# Update Log #
-### 5th July 19 - Release 1 ###
-### 27th Nov 19 - Release 2 ###
-Complete rewrite
-- Hi-res MQA support
-- CLI support
-- Download from text file support
 
 If you need to get in touch: Sorrow#5631, [Reddit](https://www.reddit.com/user/Sorrow446)
 
